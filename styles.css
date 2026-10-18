@@ -9,7 +9,7 @@
   --size-h1: 2.5rem;
   --size-h3: 1.5rem;
   --size-button: 1.125rem; 
-  --font-style-head: 'Poppins', 'Helvetica Neue', Arial, sans-serif; 
+  --font-style-head: "Lora", serif;
   --font-style-body:'Inter', system-ui, -apple-system, sans-serif;
   --btn-bg: #3182ce;
   --btn-bg-hover: #2b6cb0;
@@ -24,17 +24,13 @@
 }
 
 body {
-  margin: auto;
-  padding: 0;
-  height: 100vh;
-  width: 100vw;
+  margin: 0 auto;
+  width: 100%;
   max-width: 1440px;
+  padding: 0 4rem;
   overflow-x: hidden;
   font-family: var(--font-style-body);
   color: var(--color-text-main);
-}
-body::-webkit-scrollbar{
-  display: none;
 }
 section {
   margin: 6rem 0 0 0;
@@ -72,18 +68,14 @@ a  {
   cursor: pointer;
   font-size: var(--size-p);
 }
-main { 
 
-  padding: 0 4rem;
-  margin: 0 2rem;
-}
 header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   position: relative;
   padding: 1rem 4rem;  
-  margin: 1rem 2rem;
+  margin: 1rem 0;
 }
 #menu {
   opacity: 0;
@@ -95,7 +87,6 @@ header {
   opacity: 1;
   pointer-events: auto;
 }
-
 #contactId {display: none;} /***TEMPORARY HIDDEN**/
 #caseStudyId {display: block;}
 
@@ -231,6 +222,10 @@ header {
 }
 
 
+
+
+
+
 /**PORTFOLIO***/
 .featured-grid {
   display: grid;
@@ -239,6 +234,30 @@ header {
   gap: 2rem;
   padding: 0 0 1.5rem 0 ;
   width: 100%;
+}
+
+.hero-h1 h1{
+  display: inline-block;
+  text-transform: uppercase;
+  font-size:0.895rem;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+  color: #3182ce;
+  font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue',serif;
+}
+.featured-grid h2 {
+  font-family: lora;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.featured-grid h3 {
+  margin-bottom: 0;
+  padding: 0;
+}
+.featured-grid h4 {
+  margin-top: 3rem;
+  padding: 0;
 }
 .featured-grid img {
   width: 100%;
@@ -269,11 +288,12 @@ header {
   margin-left: 1rem;
 }
 
+
 .casestudies h2 {
   text-align: center;
 }
 .casestudies-grid {
-  padding: 1rem 0 0 0;
+  padding: 0;
   display: grid;
   align-items: start;
   grid-template-columns: repeat(3, 1fr);
@@ -342,10 +362,11 @@ header {
   margin: 0;
 }
 .cs-readm-btn button {
+  font-size: 1.125rem;
   cursor: pointer;
-  border: none;
+  border: solid 1px #3182ce;
+  border-radius: 8px;
   padding: 0.5rem;
-  border-radius: 2px;
   box-shadow: var(--box-shadow);
   background-color: #3182ce;
   color: #f3f3f3;
@@ -389,6 +410,21 @@ header {
   padding: 1rem 0;
   border-bottom: solid 1px var(--color-text-muted);
 }
+
+
+
+/****PROCESS*****/
+.process-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.process-card {
+  border: solid 1px var(--color-text-muted);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
 
 
 /***RESPONSIVENESS***/

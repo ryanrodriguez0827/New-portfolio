@@ -1,10 +1,24 @@
+//HAMBURGER MENU
+const menuBtn = document.getElementById("menuToggle");
+const menu = document.getElementById("menu");
+
+menuBtn.addEventListener("click", () => {
+  menu.classList.toggle('show');
+  if (menu.classList.contains('show')){
+    menuBtn.innerHTML = '<i class="fa-regular fa-circle-xmark"></i>';
+  } else {
+    menuBtn.innerHTML = 'MENU<i class="fa-solid fa-bars"></i>';
+  }
+});
+
+
 
 //HERO SECTION BUTTON
-const showBtn = document.querySelector("#btn1");
-const showBtn2 = document.querySelector("#btn2");
-const showImage = document.querySelector("#contactId");
-const showContent = document.querySelector("#caseStudyId");
-const hideContent = document.querySelector("#contactId");
+const showBtn = document.getElementById("btn1");
+const showBtn2 = document.getElementById("btn2");
+const showImage = document.getElementById("contactId");
+const showContent = document.getElementById("caseStudyId");
+const hideContent = document.getElementById("contactId");
 
 
 
@@ -21,33 +35,11 @@ showBtn2.addEventListener("click", () => {   //LEARN MORE btn
 });
 
 
-//HAMBURGER MENU
-const menuBtn = document.querySelector("#menuToggle");
-const menu = document.querySelector("#menu");
-
-menuBtn.addEventListener("click", () => {
-  menu.classList.toggle('show');
-  if (menu.classList.contains('show')){
-    menuBtn.innerHTML = '<i class="fa-regular fa-circle-xmark"></i>';
-  } else {
-    menuBtn.innerHTML = 'MENU<i class="fa-solid fa-bars"></i>';
-  }
-});
 
 //swiper
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
 });
 
